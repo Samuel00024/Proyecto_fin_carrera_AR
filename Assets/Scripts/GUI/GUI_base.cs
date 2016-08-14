@@ -16,9 +16,9 @@ public class GUI_base : MonoBehaviour {
 
 	void OnGUI(){
 
-		//GUI.backgroundColor = Color.yellow;
-		//GUI.color = Color.yellow;
-		//GUI.Box (new Rect (10, 10, 100, 100), "Marcador");
+		GUI.backgroundColor = Color.yellow;
+		GUI.color = Color.yellow;
+		GUI.Box (new Rect (10, 10, 170, 170), "Realidad Aumentada");
 
 	}
 }
