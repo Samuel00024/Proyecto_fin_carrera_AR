@@ -15,6 +15,7 @@ public class Pista : MonoBehaviour {
 
 	private Text texto;
 	private GameObject aceptar;
+	private esconderPistas scriptPistas;
 
 	private int i, j, k;
 
@@ -23,14 +24,11 @@ public class Pista : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		scriptPistas = FindObjectOfType<esconderPistas>();
 		texto = GameObject.Find ("PistaText").GetComponent<Text>();
-		aceptar = GameObject.Find ("OkButton");
-		aceptar.SetActive (false);
-		i = 0;
-		j = -1;
-		k = 0;
+		aceptar = GameObject.Find ("okButton");
 
-		endTime = System.TimeSpan.FromSeconds (Time.time) + System.TimeSpan.FromSeconds(nextPlaceTimer);
+		Reset();
 	
 	}
 	
@@ -60,6 +58,22 @@ public class Pista : MonoBehaviour {
 				}
 			}
 		}
+
+	}
+
+	public void Reset(){
+
+
+		texto.text = "";
+		aceptar.SetActive (false);
+
+		i = 0;
+		j = -1;
+		k = 0;
+
+		endTime = System.TimeSpan.FromSeconds (Time.time) + System.TimeSpan.FromSeconds(nextPlaceTimer);
+
+		scriptPistas.Show (true);
 
 	}
 
