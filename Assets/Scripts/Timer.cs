@@ -5,19 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
-	public Text guiText;
+	public new Text guiText;
+	private System.TimeSpan time;
+	private TimerDelay timeDelay;
+	private GameObject timer;
 
 	// Use this for initialization
+
+	void Awake(){
+
+		timer = GameObject.Find("Canvas");
+
+	}
+
 	void Start () {
 
-		guiText.color = Color.yellow;
+		timeDelay = FindObjectOfType<TimerDelay> ();
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		System.TimeSpan time = System.TimeSpan.FromSeconds (Time.timeSinceLevelLoad);
+		System.TimeSpan time = System.TimeSpan.FromSeconds (Time.realtimeSinceStartup-PlayerPrefs.GetFloat("Tiempo"));
 		guiText.text =
 			(time.Hours).ToString ("00")
 			+ ":"

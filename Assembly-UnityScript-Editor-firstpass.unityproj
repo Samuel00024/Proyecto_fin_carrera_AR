@@ -58,7 +58,6 @@
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\readme_SDK.txt" />
-     <None Include="Assets\Models\Pikachus\Pokemon ORAS\Pikachu (Cosplay)\Tag.txt" />
      <None Include="Assets\StreamingAssets\QCAR\Database_1_Prueba.xml" />
      <None Include="Assets\StreamingAssets\QCAR\Prueba_1.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />

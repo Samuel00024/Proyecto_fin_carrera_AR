@@ -14,7 +14,6 @@ public class Pista : MonoBehaviour {
 	public double nextPlaceTimer;
 
 	private Text texto;
-	private GameObject aceptar;
 	private esconderPistas scriptPistas;
 
 	private int i, j, k;
@@ -26,9 +25,15 @@ public class Pista : MonoBehaviour {
 
 		scriptPistas = FindObjectOfType<esconderPistas>();
 		texto = GameObject.Find ("PistaText").GetComponent<Text>();
-		aceptar = GameObject.Find ("okButton");
+		endTime = System.TimeSpan.FromSeconds (Time.time) + System.TimeSpan.FromSeconds(nextPlaceTimer);
 
-		Reset();
+		texto.text = "";
+
+		i = 0;
+		j = -1;
+		k = 0;
+
+		scriptPistas.Show (true);
 	
 	}
 	
@@ -61,32 +66,11 @@ public class Pista : MonoBehaviour {
 
 	}
 
-	public void Reset(){
-
-
-		texto.text = "";
-		aceptar.SetActive (false);
-
-		i = 0;
-		j = -1;
-		k = 0;
-
-		endTime = System.TimeSpan.FromSeconds (Time.time) + System.TimeSpan.FromSeconds(nextPlaceTimer);
-
-		scriptPistas.Show (true);
-
-	}
-
 	void insertOnText(){
 
 		texto.text = texto.text + poema [i];
 		i++;
 
-		if (texto.text.Equals (poema)) {
-
-			endButton ();
-
-		}
 	}
 
 	void nextPlace(){
@@ -96,8 +80,6 @@ public class Pista : MonoBehaviour {
 	}
 
 	void endButton(){
-
-		aceptar.SetActive (true);
 
 	}
 }
