@@ -15,6 +15,9 @@ public class Game2 : MonoBehaviour {
 	private bool fin;
 	private bool puntos;
 
+	public int numero_piezas_ancho;
+	public int numero_piezas_alto;
+
 	void Start () {
 
 		piezas = new List<RaycastHit> ();
@@ -23,9 +26,9 @@ public class Game2 : MonoBehaviour {
 
 		fin = false;
 	
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < numero_piezas_alto; i++) {
 
-			for (int j = 0; j < 9; j++) {
+			for (int j = 0; j < numero_piezas_ancho; j++) {
 
 				puzzle.Add ((GameObject)GameObject.Find(i.ToString()+j.ToString()));
 				posiciones.Add (puzzle [puzzle.Count - 1].transform.localPosition);
@@ -128,4 +131,12 @@ public class Game2 : MonoBehaviour {
 
 		}
 	}
+
+	public void reset(){
+
+		SceneManager.LoadScene ("Level0");
+
+	}
+
 }
+

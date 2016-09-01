@@ -221,7 +221,8 @@ public class Game : MonoBehaviour {
 		//Application.UnloadLevel ("Level1");
 		//Application.LoadLevel ("Level2");
 		//SceneManager.UnloadScene ("Level1");
-		SceneManager.LoadScene ("Level2");
+		//SceneManager.LoadScene ("Level2");
+		SceneManager.LoadScene("Escena_de_pruebas2_proyecto");
 	}
 
 	// Update is called once per frame

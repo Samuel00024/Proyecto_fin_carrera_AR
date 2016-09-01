@@ -64,6 +64,7 @@
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\StreamingAssets\QCAR\Database_4_Spherical.xml" />
+     <None Include="Assets\StreamingAssets\QCAR\Database_7_Ext.xml" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

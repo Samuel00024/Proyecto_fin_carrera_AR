@@ -17,8 +17,10 @@ public class loadNext : MonoBehaviour {
 	public void loadLevel(){
 
 		canv.SetActive (false);
-		SceneManager.UnloadScene ("Level0");
-		SceneManager.LoadScene ("Level1");
+		//SceneManager.UnloadScene ("Level0");
+		//SceneManager.LoadScene ("Level1");
+		SceneManager.UnloadScene("Level0");
+		SceneManager.LoadScene ("Escena_de_pruebas1_proyecto");
 	}
 	
 	// Update is called once per frame

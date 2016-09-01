@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Vuforia;
 	
-public class pikachuTargetIdentifier : MonoBehaviour, ITrackableEventHandler{
+public class targetIdentifier : MonoBehaviour, ITrackableEventHandler{
 
 	private TrackableBehaviour mTrackableBehaviour;
 
